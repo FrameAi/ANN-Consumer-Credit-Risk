@@ -48,3 +48,15 @@ Dataset Attributes:
 # Note we have two headers in dataset, skip the extra row
 dataset = pd.read_excel('dataset/default-of-credit-card-clients.xls', skiprows=1)
 
+# In[2]:
+
+# matrix of features (independent variables). 
+# select: all rows. columnn indices 1 - 23 (exclude columns: id#)
+X = dataset.iloc[:, 1:24].values 
+
+# matrix of dependent vars (output to predict)
+# select: all rows. last column
+y = dataset.iloc[:, -1].values
+
+
+
